@@ -2,10 +2,10 @@ THÔNG TIN NHÓM 10.0
 
 I/ THÀNH VIÊN
 1. Nguyễn Thị Thu Hằng (18120027)
-2. Bùi Đoàn Hữu Nhân (181200..)
-3. Nguyễn Xuân Mai (18120056)
+2. Nguyễn Xuân Mai (18120056)
+3. Bùi Đoàn Hữu Nhân (18120066)
 4. Nguyễn Tấn Thìn (18120085)
-5. Phạm Nguyên Minh Thy (181200..)
+5. Phạm Nguyên Minh Thy (18120090)
 
 II/ THÔNG TIN LIÊN LẠC
 
@@ -15,17 +15,18 @@ SĐT: 0358359719
 Email: thuhang.fit.hcmus@gmail.com
 Fb: www.facebook.com/ThuHangHCMUS
 
-2. Bùi Đoàn Hữu Nhân 
+2. Nguyễn Xuân Mai (18120056)
+MSSV: 1812056
+SĐT: 0335973804
+Email: 18120056@student.hcmus.edu.vn
+Fb: fb.com/nxmai1210
+
+3. Bùi Đoàn Hữu Nhân 
 MSSV: 181200..
 SĐT: 
 Email: bdhnhan.it@gmail.com
 Fb:
 
-3. Nguyễn Xuân Mai (18120056)
-MSSV: 181200..
-SĐT: 
-Email: 18120056@student.hcmus.edu.vn
-Fb:
 
 4. Nguyễn Tấn Thìn (18120085)
 MSSV: 18120085
@@ -33,10 +34,18 @@ SĐT: 0795526749
 Email: znz.znz.21@gmail.com
 Fb: https://www.facebook.com/NgTanThin
 
-5. Phạm Nguyên Minh Thy (181200..)
-MSSV: 181200..
-SĐT: 
+5. Phạm Nguyên Minh Thy (18120090)
+MSSV: 18120090
+SĐT: 0981004900
 Email: pnmthy0602@gmail.com
-Fb:
+Fb: https://www.facebook.com/ngm.thyy
 
 III/ PHÂN CÔNG CÔNG VIỆC
+1.Ngày 1 (T7 25/04/2020)
+Nhập Xuât, Tổ chức dữ liệu
+2.Ngày 2 (T4 29/04/2020)
+-Thu Hằng: g
+-Xuân Mai: e f chuyển thập lục phân sang nhị phân
+-Hữu nhân: c d i
+-Tấn Thìn: j
+-Minh Thy: h
