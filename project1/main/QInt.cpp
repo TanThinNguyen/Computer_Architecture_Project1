@@ -1,4 +1,6 @@
-﻿#include "QInt.h"
+﻿#include "pch.h"
+#include "QInt.h"
+#include "BitManipulation.h"
 
 /*Hàm chia chuỗi cho 2
 Đầu vào: chuỗi s
@@ -102,7 +104,7 @@ Cách hoạt động muốn chuyển sang số bù 2 và ngược lại:
 void QInt::convert2complement()
 {
 	int i = 127;
-	while (i >= 0 && data[i / 32] >> (31 - i % 32) == 0) {
+	while (i >= 0 && ((data[i / 32] >> (31 - i % 32)) & 1) == 0) {
 		i--;
 	}
 	i--;
@@ -120,7 +122,7 @@ void QInt::ScanQInt(string s)
 		s.erase(0, 1);
 		sign = 1;
 	}
-	
+
 	int i = 127;
 	while (s.length() > 1 || (s.length() == 1 && s[0] != 0)) {
 		if ((s[s.length() - 1] - '0') % 2 == 1) {
@@ -129,17 +131,9 @@ void QInt::ScanQInt(string s)
 		s = divideBy2(s);
 		i--;
 	}
-	/*if (sign == 1)
-		data[0] |= 1 << 31;*/
+
 	if (sign == 1)
 		this->convert2complement();
-	/*for (int i = 0; i < 4; i++) {
-		for (int j = 31; j >=0; j--) {
-			int x = (data[i] >> j) & 1;
-			cout << x;
-		}
-		cout << endl;
-	}*/
 }
 
 /* Hàm xuất dữ liệu cho QInt */
@@ -147,24 +141,25 @@ string QInt::PrintQInt()
 {
 	int x, sign = 0;
 	string powerOf2, res = "";
-	if ((data[0] >> 31) & 1 == 1) {
+	QInt temp = *this;
+	if (((data[0] >> 31) & 1) == 1) {
 		sign = 1;
-		this->convert2complement();
+		temp.convert2complement();
 	}
 
 	for (int i = 0; i < 4; i++) {
-		x = data[i];
+		x = temp.data[i];
 		for (int j = 0; j < 32; j++) {
 			if (i == 0 && j == 31)
 				continue;
-			if (x & 1 == 1) {
+			if ((x & 1) == 1) {
 				powerOf2 = Pow("2", (3 - i) * 32 + j);
 				res = sum(res, powerOf2);
 			}
 			x >>= 1;
 		}
 	}
-	
+
 	if (sign == 1)
 		return "-" + res;
 	return res;
@@ -177,4 +172,10 @@ QInt::QInt()
 
 QInt::~QInt()
 {
+}
+
+QInt& QInt::operator<<(int y)
+{
+	QInt res = BitManipulation::logicalLeftShift(*this, y);
+	return res;
 }

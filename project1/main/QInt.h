@@ -14,6 +14,10 @@ public:
 	string PrintQInt();
 	QInt();
 	~QInt();
+
+	friend class BitManipulation;
+
+	QInt& operator<<(int y);
 };
 
 #endif // !__QINT_H__
