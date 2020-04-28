@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
 #include "QInt.h"
 #include "BitManipulation.h"
+#include "Comparison.h"
 
 /*Hàm chia chuỗi cho 2
 Đầu vào: chuỗi s
@@ -163,6 +164,55 @@ string QInt::PrintQInt()
 	if (sign == 1)
 		return "-" + res;
 	return res;
+}
+
+bool QInt::operator<(QInt a)
+{
+	Comparison comp;
+	if (comp.compare(*this, a) == -1)
+		return true;
+	return false;
+}
+
+bool QInt::operator>(QInt a)
+{
+	Comparison comp;
+	if (comp.compare(*this, a) == 1)
+		return true;
+	return false;
+}
+
+bool QInt::operator==(QInt a)
+{
+	Comparison comp;
+	if (comp.compare(*this, a) == 0)
+		return true;
+	return false;
+}
+
+bool QInt::operator<=(QInt a)
+{
+	Comparison comp;
+	int res = comp.compare(*this, a);
+	if (res == -1 | res == 0)
+		return true;
+	return false;
+}
+
+bool QInt::operator>=(QInt a)
+{
+	Comparison comp;
+	int res = comp.compare(*this, a);
+	if (res == 1 | res == 0)
+		return true;
+	return false;
+}
+
+QInt QInt::operator=(QInt a)
+{
+	Comparison comp;
+	comp.assign(*this, a);
+	return *this;
 }
 
 QInt::QInt()

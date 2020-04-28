@@ -12,12 +12,20 @@ public:
 	void convert2complement();
 	void ScanQInt(string s);
 	string PrintQInt();
-	QInt();
-	~QInt();
 
-	friend class BitManipulation;
+	bool operator < (QInt a);
+	bool operator > (QInt a);
+	bool operator == (QInt a);
+	bool operator <= (QInt a);
+	bool operator >= (QInt a);
+	QInt operator = (QInt a);
+	friend class Comparison;
 
 	QInt& operator<<(int y);
+	friend class BitManipulation;
+
+	QInt();
+	~QInt();
 };
 
 #endif // !__QINT_H__

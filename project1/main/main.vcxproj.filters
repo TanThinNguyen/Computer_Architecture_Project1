@@ -21,7 +21,11 @@
     <ClInclude Include="QInt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="BitManipulation.h">
+=======
+    <ClInclude Include="Comparison.h">
+>>>>>>> upstream/master
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +39,11 @@
     <ClCompile Include="QInt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="BitManipulation.cpp">
+=======
+    <ClCompile Include="Comparison.cpp">
+>>>>>>> upstream/master
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
